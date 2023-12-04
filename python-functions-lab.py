@@ -55,3 +55,11 @@ print("Challenge 3 -", occurrences('fleep floop', 'e'), occurrences('fleep floop
 #  product(-1, 4) # returns -4
 #  product(2, 5, 5) # returns 50
 #  product(4, 0.5, 5) # returns 10.0
+
+def product(*args):
+  result = 1
+  for factor in args:
+    result *= factor
+  return result
+
+print("Challenge 4 -", product(-1, 4), product(2, 5, 5), product(4, 0.5, 5))
