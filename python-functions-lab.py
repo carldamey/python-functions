@@ -11,7 +11,7 @@ def sum_to(n):
     sum += num
   return sum
 
-print(sum_to(6), sum_to(10))
+print("Challenge 1-", sum_to(6), sum_to(10))
 
 # 2. Write a function named largest that takes a list of numbers as an argument and returns the largest number in that list.
 # 
@@ -20,8 +20,14 @@ print(sum_to(6), sum_to(10))
 #  largest([1, 2, 3, 4, 0])  # returns 4
 #  largest([10, 4, 2, 231, 91, 54])  # returns 231
 
+def largest(num_list):
+  largest_num = 0
+  for num in num_list:
+    if num > largest_num:
+      largest_num = num
+  return largest_num
 
-
+print("Challenge 2-", largest([1, 2, 3, 4, 0]), largest([10, 4, 2, 231, 91, 54]))
 
 # 3. Write a function named occurrences that takes two string arguments as input and counts the number of occurrences of the second string inside the first string.
 # 
