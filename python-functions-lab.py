@@ -63,3 +63,22 @@ def product(*args):
   return result
 
 print("Challenge 4 -", product(-1, 4), product(2, 5, 5), product(4, 0.5, 5))
+
+# Bonus Challenge
+# Write a function named steps_to_zero that accepts a non-negative integer as an argument, and returns the number of steps it took to reduce the integer to zero. If the current number is even, you have to divide it by 2, otherwise, you have to subtract 1 from it.
+# 
+# For example:
+# 
+#  steps_to_zero(14) # returns 6
+
+def steps_to_zero(int):
+  steps = 0
+  while int:
+    if int % 2:
+      int -= 1
+    else:
+      int //= 2
+    steps += 1
+  return steps
+
+print("Bonus Challenge -", steps_to_zero(14))
