@@ -11,7 +11,7 @@ def sum_to(n):
     sum += num
   return sum
 
-print("Challenge 1-", sum_to(6), sum_to(10))
+print("Challenge 1 -", sum_to(6), sum_to(10))
 
 # 2. Write a function named largest that takes a list of numbers as an argument and returns the largest number in that list.
 # 
@@ -27,7 +27,7 @@ def largest(num_list):
       largest_num = num
   return largest_num
 
-print("Challenge 2-", largest([1, 2, 3, 4, 0]), largest([10, 4, 2, 231, 91, 54]))
+print("Challenge 2 -", largest([1, 2, 3, 4, 0]), largest([10, 4, 2, 231, 91, 54]))
 
 # 3. Write a function named occurrences that takes two string arguments as input and counts the number of occurrences of the second string inside the first string.
 # 
@@ -38,8 +38,14 @@ print("Challenge 2-", largest([1, 2, 3, 4, 0]), largest([10, 4, 2, 231, 91, 54])
 #  occurrences('fleep floop', 'ee')  # returns 1
 #  occurrences('fleep floop', 'fe')  # returns 0
 
-
-
+def occurrences(str1, str2):
+  matches = 0
+  while str2 in str1:
+    str1 = str1.replace(str2, "", 1)
+    matches += 1
+  return matches
+  
+print("Challenge 3 -", occurrences('fleep floop', 'e'), occurrences('fleep floop', 'p'), occurrences('fleep floop', 'ee'), occurrences('fleep floop', 'fe'))
 
 # 4. Write a function named product that takes an arbitrary number of numbers, multiplies them all together, and returns the product.
 # (HINT: Review your notes on *args).
